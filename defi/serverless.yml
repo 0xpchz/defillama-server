@@ -223,6 +223,14 @@ functions:
       - http:
           path: raises
           method: get
+  audits:
+  handler: src/getAudits.default
+  timeout: 60
+  memorySize: 2000
+  events:
+    - http:
+        path: audits
+        method: get
   oracles:
     handler: src/getOracles.default
     timeout: 600
